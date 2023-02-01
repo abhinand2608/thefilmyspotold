@@ -873,6 +873,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('Help ℹ️', callback_data='help'),
                     InlineKeyboardButton('About 😊🖖🏻', callback_data='about')
                 ],[ 
+                    InlineKeyboardButton('Extra Features ♋', callback_data='plugin')
+                ],[ 
                     InlineKeyboardButton('𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭 💎', url=GRP_LNK)
                   ]]
         
@@ -948,6 +950,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
             text=script.HELP_TXT.format(query.from_user.mention),
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "plugin":
+        buttons = [[
+             InlineKeyboardButton('Get Url For Media 🖇️', callback_data='urlshort'),
+             InlineKeyboardButton('🏠 Home', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
         )
     elif query.data == "about":
         buttons = [[
@@ -1074,6 +1091,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.ADMIN_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
+    elif query.data == "urlshort":
+        buttons = [[
+            InlineKeyboardButton('back', callback_data='plugin')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.URLSHORT_TXT,
+            disable_web_page_preview=True,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )

@@ -814,7 +814,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data.startswith("already_available"):
         ident, from_user = query.data.split("#")
         btn = [[
-                InlineKeyboardButton("🟢 Aʟʀᴇᴀᴅʏ Aᴠᴀɪʟᴀʙʟᴇ 🟢", callback_data=f"alalert#{from_user}")
+                InlineKeyboardButton("🟢 Aʟʀᴇᴀᴅʏ Aᴠᴀɪʟᴀʙʟᴇ ✅ 🟢", callback_data=f"alalert#{from_user}")
               ]]
         btn2 = [[
                  InlineKeyboardButton("Vɪᴇᴡ Sᴛᴀᴛᴜs", url=f"{query.message.link}")
@@ -873,8 +873,8 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     InlineKeyboardButton('Help ℹ️', callback_data='help'),
                     InlineKeyboardButton('About 😊🖖🏻', callback_data='about')
                 ],[ 
-                    InlineKeyboardButton('Extra Features ♋', callback_data='plugin')
-                ],[ 
+                   InlineKeyboardButton('Extra Features ♋', callback_data='plugin')
+                ],[  
                     InlineKeyboardButton('𝐭𝐡𝐞𝐟𝐢𝐥𝐦𝐲𝐬𝐩𝐨𝐭 💎', url=GRP_LNK)
                   ]]
         
@@ -931,7 +931,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "help":
         buttons = [[
             InlineKeyboardButton('FIʟᴛᴇʀs', callback_data='filters'),
-            InlineKeyboardButton('Fɪʟᴇ Sᴛᴏʀᴇ', callback_data='store_file')
+            InlineKeyboardButton('Get Url For Media 🖇️', callback_data='urlshort')
         ], [
             InlineKeyboardButton('Cᴏɴɴᴇᴄᴛɪᴏɴ', callback_data='coct'),
             InlineKeyboardButton('Exᴛʀᴀ Mᴏᴅs', callback_data='extra')
@@ -1096,7 +1096,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "urlshort":
         buttons = [[
-            InlineKeyboardButton('back', callback_data='plugin')
+            InlineKeyboardButton('ʙᴀᴄᴋ', callback_data='plugin')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(

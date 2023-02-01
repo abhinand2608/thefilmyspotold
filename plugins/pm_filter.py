@@ -951,6 +951,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "plugin":
+        buttons = [[
+             InlineKeyboardButton('Get Url For Media 🖇️', callback_data='urlshort'),
+             InlineKeyboardButton('🏠 Home', callback_data='start')
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text="▣ ▢ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▢"
+        )
+        await query.message.edit_text(
+            text="▣ ▣ ▣"
+        )
     elif query.data == "about":
         buttons = [[
             InlineKeyboardButton(" Our Group", url=GRP_LNK),

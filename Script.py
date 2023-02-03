@@ -118,36 +118,12 @@ Name - {}
 """
 
 
-    MELCOW_ENG = """HELLO {MENTION}🌝❤️
+ MELCOW_ENG = """<b>HELLO {}🌝❤️
 
-WELCOME TO {GROUPNAME} 😻🥂 
+WELCOME TO {} 🤑🥂 
 
 THANKS FOR JOINING &
- KEEP SUPPORTING US 🤍🙌🏻.
-"""
-    MINFO = """
-
-Join our <a href='https://t.me/thefilmyspotin'>main channel</a> below to get access to the movies. Before requesting the movies, Must join our main channel. Only by joining will you get access to all the movies...
-
-NB: You can only get the movie by typing in the correct spelling...
-
-If you do not get the Movie / Series, mention the admin in the following format 👇
-
-🤷 Example: @admin Avatar 2009 English 
-            @admin Breaking Bad S05E07
-Wᴇ Dᴏ Nᴏᴛ Oᴡɴ Aɴʏ Cᴏɴᴛᴇɴᴛ Pᴏsᴛᴇᴅ Hᴇʀᴇ. Wᴇ Oɴʟʏ Sʜᴀʀᴇ Tʜᴏsᴇ Fɪʟᴇs Wʜɪᴄʜ Aʀᴇ Aʟʀᴇᴀᴅʏ Sʜᴀʀᴇᴅ Bʏ Sᴏᴍᴇʙᴏᴅʏ Eʟsᴇ Oɴ Tʜᴇ Iɴᴛᴇʀɴᴇᴛ
-"""
-    REQINFO = """
-⚠️ Iꜰ Yᴏᴜ Oᴡɴ Tʜᴇ Cᴏᴘʏʀɪɢʜᴛs Oꜰ Aɴʏ Sᴛᴜꜰꜰ, Iɴᴛɪᴍᴀᴛᴇ Us Wɪᴛʜ Pʀᴏᴏꜰ Wᴇ Wɪʟʟ Rᴇᴍᴏᴠᴇ
-
-Do not contact Admin directly...
-
-If you want to contact Admin, Please send the message to @thefilmyspothelpbot and the bot will deliver the message to the group Admin...
-
-<a href='https://t.me/thefilmyspothelpbot'>If you are facing any problems with our movie files, bots or groups, report it in our Feedback Bot : @thefilmyspothelp</a>
-
-For admin support type @admins with your message and the bot will forward the message to the admin...</b>"""
-"""
+ KEEP SUPPORTING US 🤍🙌🏻</b>"""
 
     OWNER_INFO = """
 <b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟
@@ -155,6 +131,23 @@ For admin support type @admins with your message and the bot will forward the me
 • ꜰᴜʟʟ ɴᴀᴍᴇ : A҉B҉H҉I҉N҉A҉N҉D҉
 • ᴜꜱᴇʀɴᴀᴍᴇ : @Abhinand3510
 • ᴘᴇʀᴍᴀɴᴇɴᴛ ᴅᴍ ʟɪɴᴋ : <a href='t.me/abhinand3510'>ᴄʟɪᴄᴋ ʜᴇʀᴇ</a></b>"""
+
+    REQINFO = """
+⚠ ɪɴꜰᴏʀᴍᴀᴛɪᴏɴ ⚠
+ • Request Admin For a File Not Available, Join @thefilmyspotsupport Group & Request With ▶️ #request <Movie Name>◀️ 
+ • Also Check Next Page Below To Find The File You Looking For """
+
+    MINFO = """
+⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
+REQUESTING FORMAT
+⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
+→ Search Name On Google 
+→ Then Copy The Correct Name 
+→ Paste On This Group
+
+Movie : Kgf Chapter 2 2022 Tamil
+Series : Breaking Bad s01e14
+🚯 Never Use These╭⁠☞ ':(!,./)"""
 
     RESTART_TXT = """
 

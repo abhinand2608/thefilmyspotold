@@ -138,12 +138,10 @@ THANKS FOR JOINING &
  • Also Check Next Page Below To Find The File You Looking For """
 
     MINFO = """
-⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
-REQUESTING FORMAT
-⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯⋯
+⚪ REQUESTING FORMAT ⚪
+
 → Search Name On Google 
-→ Then Copy The Correct Name 
-→ Paste On This Group
+→ Then Copy & Paste The Correct Name On Group
 
 Movie : Kgf Chapter 2 2022 Tamil
 Series : Breaking Bad s01e14

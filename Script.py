@@ -124,6 +124,8 @@ WELCOME TO {GROUPNAME} 😻🥂
 
 THANKS FOR JOINING &
  KEEP SUPPORTING US 🤍🙌🏻.
+"""
+    MINFO = """
 
 Join our <a href='https://t.me/thefilmyspotin'>main channel</a> below to get access to the movies. Before requesting the movies, Must join our main channel. Only by joining will you get access to all the movies...
 
@@ -134,7 +136,8 @@ If you do not get the Movie / Series, mention the admin in the following format 
 🤷 Example: @admin Avatar 2009 English 
             @admin Breaking Bad S05E07
 Wᴇ Dᴏ Nᴏᴛ Oᴡɴ Aɴʏ Cᴏɴᴛᴇɴᴛ Pᴏsᴛᴇᴅ Hᴇʀᴇ. Wᴇ Oɴʟʏ Sʜᴀʀᴇ Tʜᴏsᴇ Fɪʟᴇs Wʜɪᴄʜ Aʀᴇ Aʟʀᴇᴀᴅʏ Sʜᴀʀᴇᴅ Bʏ Sᴏᴍᴇʙᴏᴅʏ Eʟsᴇ Oɴ Tʜᴇ Iɴᴛᴇʀɴᴇᴛ
-
+"""
+    REQINFO = """
 ⚠️ Iꜰ Yᴏᴜ Oᴡɴ Tʜᴇ Cᴏᴘʏʀɪɢʜᴛs Oꜰ Aɴʏ Sᴛᴜꜰꜰ, Iɴᴛɪᴍᴀᴛᴇ Us Wɪᴛʜ Pʀᴏᴏꜰ Wᴇ Wɪʟʟ Rᴇᴍᴏᴠᴇ
 
 Do not contact Admin directly...
@@ -144,6 +147,7 @@ If you want to contact Admin, Please send the message to @thefilmyspothelpbot an
 <a href='https://t.me/thefilmyspothelpbot'>If you are facing any problems with our movie files, bots or groups, report it in our Feedback Bot : @thefilmyspothelp</a>
 
 For admin support type @admins with your message and the bot will forward the message to the admin...</b>"""
+"""
 
     OWNER_INFO = """
 <b>⍟───[ ᴏᴡɴᴇʀ ᴅᴇᴛᴀɪʟꜱ ]───⍟

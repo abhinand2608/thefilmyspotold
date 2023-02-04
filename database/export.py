@@ -1,7 +1,7 @@
 import pymongo
 import telegram
 import os
-from info import DATABASE_URI, DATABASE_NAME, COLLECTION_NAME
+from info import DATABASE_URI, DATABASE_NAME, COLLECTION_NAME, BOT_TOKEN
 from utils import get_settings, save_group_settings
 
 # Connection string to connect to the MongoDB Atlas cluster

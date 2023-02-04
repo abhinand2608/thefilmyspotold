@@ -13,6 +13,7 @@ from utils import get_settings, get_size, is_subscribed, save_group_settings, te
 from database.connections_mdb import active_connection
 import re
 import json
+import pymongo
 import base64
 logger = logging.getLogger(__name__)
 
@@ -771,3 +772,63 @@ async def shortlink(bot, message):
     await save_group_settings(grpid, 'shortlink_api', api)
     await save_group_settings(grpid, 'is_shortlink', True)
     await reply.edit_text(f"<b>Successfully added shortlink API for {title}.\n\nCurrent Shortlink Website: <code>{shortlink_url}</code>\nCurrent API: <code>{api}</code></b>")
+
+@Client.on_message(filters.command("export") & filters.user(ADMINS))
+async def send_msg(bot, message):
+    if message.reply_to_message:
+        target_id = message.text.split(" ", 1)[1]
+        out = "Users Saved In DB Are:\n\n"
+        success = False
+        try:
+            user = await bot.get_users(target_id)
+            users = await db.get_all_users()
+            async for usr in users:
+                out += f"{usr['id']}"
+                out += '\n'
+            if str(user.id) in str(out):
+                await message.reply_to_message.copy(int(user.id))
+                success = True
+            else:
+                success = False
+            
+# Connection string to connect to the MongoDB Atlas cluster
+uri = "mongodb+srv://<username>:<password>@cluster0.mongodb.net/test?retryWrites=true&w=majority"
+
+# Connect to the cluster
+client = pymongo.MongoClient(uri)
+
+# Get the database you want to export data from
+db = client["mydatabase"]
+
+# Get the collection you want to export data from
+collection = db["mycollection"]
+
+# Retrieve all files from the collection
+files = collection.find({})
+
+# Initialize the Telegram Bot API client
+bot = telegram.Bot(token='BOT_TOKEN')
+
+# Loop through the files and export each one to the Telegram channel
+for file in files:
+    # Check that the file has a path and that it exists
+    if 'path' not in file:
+        print(f"File {file} is missing a path and will not be exported.")
+        continue
+    if not os.path.exists(file['path']):
+        print(f"File {file['path']} does not exist and will not be exported.")
+        continue
+
+    # Determine the file type based on the file extension
+    file_type = file['path'].split('.')[-1].lower()
+
+    try:
+        if file_type in ['mp4', 'avi', 'mkv']:
+            bot.send_video(chat_id='-100YOUR_CHANNEL_ID', video=open(file['path'], 'rb'))
+            print(f"Video {file['path']} exported successfully.")
+        else:
+            with open(file['path'], 'rb') as f:
+                bot.send_document(chat_id='-100YOUR_CHANNEL_ID', document=f)
+                print(f"File {file['path']} exported successfully.")
+    except Exception as e:
+        print(f"Failed to export file {file['path']}: {e}")

@@ -35,11 +35,11 @@ for file in files:
 
     try:
         if file_type in ['mp4', 'avi', 'mkv']:
-            bot.send_video(chat_id='@yourchannel', video=open(file['path'], 'rb'))
+            bot.send_video(chat_id='-100YOUR_CHANNEL_ID', video=open(file['path'], 'rb'))
             print(f"Video {file['path']} exported successfully.")
         else:
             with open(file['path'], 'rb') as f:
-                bot.send_document(chat_id='@yourchannel', document=f)
+                bot.send_document(chat_id='-100YOUR_CHANNEL_ID', document=f)
                 print(f"File {file['path']} exported successfully.")
     except Exception as e:
         print(f"Failed to export file {file['path']}: {e}")
